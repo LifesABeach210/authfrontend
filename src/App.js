@@ -1,22 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./Componets/NavBar";
+import Home from "./Pages/Home";
+import RegistrationPage from "./Pages/RegistrationPage";
+import Login from "./Pages/Login";
+import { useState } from "react";
 
 function App() {
+  const [authLoading, isAuthLoading] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Routes>
+          <Route
+            path={"/"}
+            element={
+              <NavBar
+                isAuthLoading={isAuthLoading}
+                authLoading={authLoading}
+              />
+            }
+          />
+          <Route index element = {<Home  />}/>
+          <Route path='Login'
+          element={<Login authLoading={authLoading}isAuthLoading={isAuthLoading}/>}
+
+          />
+          <Route path='registration' element={<RegistrationPage authLoading={authLoading}
+          isAuthLoading={isAuthLoading}
+           />} />
+
+        </Routes>
       </header>
     </div>
   );
