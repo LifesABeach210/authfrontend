@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { loginUser } from "../Auth";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = ({ authLoading, setIsAuthLoading }) => {
+const Login = ({ authLoading, setIsAuthLoading }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [invalidMssg, setInvalidMss] = useState("");
@@ -50,4 +50,4 @@ const LoginPage = ({ authLoading, setIsAuthLoading }) => {
   );
 };
 
-export default LoginPage;
+export default Login;
