@@ -34,7 +34,10 @@ const Login = ({ authLoading, setIsAuthLoading }) => {
           setIsAuthLoading(true);
           const isUserLoggedIn = await loginUser(username, password);
           setIsAuthLoading(false);
+         console.log(isUserLoggedIn);
           if (isUserLoggedIn) {
+           
+           
             navigate("/");
           }
           setInvalidMss(

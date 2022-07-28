@@ -28,7 +28,7 @@ const RegistrationPage = ({ authLoading, setIsAuthLoading }) => {
           setPassword(e.target.value);
         }}
       ></input>
-      <br />
+      <br /> 
       <button
         onClick={async () => {
           setIsAuthLoading(true);

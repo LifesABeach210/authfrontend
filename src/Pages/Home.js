@@ -22,25 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      <br />
-      <br />
-      <h2>Home Page</h2>
-      {validatedUser && (
-        <>
-          <br />
-          <br />
-          <br />
-
-          <button
-            onClick={async () => {
-              const secret = await requestSecretMessage();
-              alert(secret.message);
-            }}
-          >
-            Get Secret Message
-          </button>
-        </>
-      )}
+     <p>hello</p>
     </div>
   );
 };
