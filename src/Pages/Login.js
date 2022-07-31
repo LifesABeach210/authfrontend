@@ -14,9 +14,9 @@ const Login = ({ authLoading, setIsAuthLoading }) => {
       <label>Username: </label>
       <input
         type="text"
-        value={username}
+        value={username}//input pre state 
         onChange={(e) => {
-          setUsername(e.target.value);
+          setUsername(e.target.value);//set state var 
         }}
       ></input>
       <br />
@@ -48,7 +48,7 @@ const Login = ({ authLoading, setIsAuthLoading }) => {
         Login
       </button>
       <br />
-      <div>{invalidMssg}</div>
+
     </div>
   );
 };

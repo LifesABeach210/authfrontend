@@ -5,7 +5,7 @@ export const registerUser = async (username, password) => {
   const response = await fetch(`${urlEndpoint}/auth/register-user`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json",// always needed 
     },
     body: JSON.stringify({
       username,
@@ -16,11 +16,11 @@ export const registerUser = async (username, password) => {
   return responseJSON.success;
 };
 
-export const loginUser = async (username, password) => {
-  const response = await fetch(`${urlEndpoint}/auth/login-user`, {
-    method: "POST",
+export const loginUser = async (username, password) => {//export function from login
+  const response = await fetch(`${urlEndpoint}/auth/login-user`, { //grabs the backend
+    method: "POST",//
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json",// is needed for file to be reconized 
     },
     body: JSON.stringify({
       username,
